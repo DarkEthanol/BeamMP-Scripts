@@ -25,6 +25,7 @@ function onInit()
 end
 
 function onChatMessage(senderID, name, message)
+    message = string.lower(message);
     if message:startsWith("/rob") then
         local command = string.match(message, "/rob (.*)");
         if command == nil then           
